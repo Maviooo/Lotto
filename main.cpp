@@ -22,7 +22,7 @@ void wypisz_szansa(int tab[])
 int sprawdzanie_szansa(int tab1[], int tab2[])
 {
     int licznik=0;
-    for(int i=6;i>=6;i--)
+    for(int i=6;i>=0;i--)
     {
         if(tab1[i]==tab2[i])
             licznik++;
@@ -97,7 +97,7 @@ int main()
         while(wybor1!=1 and wybor1!=2 and wybor1!=0);
         if(wybor1==1)
         {
-            int urzytkownik[6];
+            int uzytkownik[6];
             int losowe[6];
             int intlosowan;
             system("cls");
@@ -120,12 +120,12 @@ int main()
                 do
                 {
                     system("cls");
-                    wypelnij0(urzytkownik);
+                    wypelnij0(uzytkownik);
                     for(int i=0;i<6;i++)
                     {
                         cout<<"Podaj liczbe ("<<i+1<<") :";
-                        cin>>urzytkownik[i];
-                        if(urzytkownik[i]>49 or urzytkownik[i]<1)
+                        cin>>uzytkownik[i];
+                        if(uzytkownik[i]>49 or uzytkownik[i]<1)
                         {
                             cout<<"Podano liczbe z poza zakresu!\n";
                             i--;
@@ -134,7 +134,7 @@ int main()
                         {
                             if(j!=i)
                             {
-                                if(urzytkownik[i]==urzytkownik[j])
+                                if(uzytkownik[i]==uzytkownik[j])
                                 {
                                     cout<<"Podana liczba juz zostala raz urzyta!\n";
                                     i--;
@@ -145,7 +145,7 @@ int main()
                     }
                     system("cls");
                     cout<<"Podano liczby: ";
-                    wypisz(urzytkownik);
+                    wypisz(uzytkownik);
                     cout<<"\nCzy chcesz je zmienic?[T/N]";
                     cin>>odp;
                 }
@@ -154,11 +154,11 @@ int main()
             if(wybor2==2)
             {
                 system("cls");
-                losuj6(urzytkownik);
+                losuj6(uzytkownik);
             }
             system("cls");
             cout<<"Twoje liczby: ";
-            wypisz(urzytkownik);
+            wypisz(uzytkownik);
             do
             {
 
@@ -190,7 +190,7 @@ int main()
             {
                 system("cls");
                 cout<<"Twoje liczby: ";
-                wypisz(urzytkownik);
+                wypisz(uzytkownik);
                 int zplusem[6];
                 for(int i=0;i<intlosowan;i++)
                 {
@@ -198,17 +198,17 @@ int main()
                     losuj6(zplusem);
                     cout<<"\nLosowanie standardowe: ";
                     wypisz(losowe);
-                    cout <<"Trafiles "<< sprawdzanie(urzytkownik, losowe);
-                    if(sprawdzanie(urzytkownik, losowe)==0 or sprawdzanie(urzytkownik, losowe)==5 or sprawdzanie(urzytkownik, losowe)==6)
+                    cout <<"Trafiles "<< sprawdzanie(uzytkownik, losowe);
+                    if(sprawdzanie(uzytkownik, losowe)==0 or sprawdzanie(uzytkownik, losowe)==5 or sprawdzanie(uzytkownik, losowe)==6)
                         cout <<" liczb!";
                     else
                         cout<<" liczby!";
                     cout<<"\nLosownie Plus: ";
                     wypisz(zplusem);
-                    cout <<"Trafiles "<< sprawdzanie(urzytkownik, zplusem);
-                    if(sprawdzanie(urzytkownik, zplusem)==0 or sprawdzanie(urzytkownik, zplusem)==5 or sprawdzanie(urzytkownik, zplusem)==6)
+                    cout <<"Trafiles "<< sprawdzanie(uzytkownik, zplusem);
+                    if(sprawdzanie(uzytkownik, zplusem)==0 or sprawdzanie(uzytkownik, zplusem)==5 or sprawdzanie(uzytkownik, zplusem)==6)
                         cout <<" liczb!";
-                    else if(sprawdzanie(urzytkownik, zplusem)==1)
+                    else if(sprawdzanie(uzytkownik, zplusem)==1)
                         cout<<" liczbe!";
                     else
                         cout<<" liczby!";
@@ -221,16 +221,16 @@ int main()
             {
                 system("cls");
                 cout<<"Twoje liczby: ";
-                wypisz(urzytkownik);
+                wypisz(uzytkownik);
                 for(int i=0;i<intlosowan;i++)
                 {
                     losuj6(losowe);
                     cout<<"\nLiczby wylosowane: ";
                     wypisz(losowe);
-                    cout <<"Trafiles "<< sprawdzanie(urzytkownik, losowe);
-                    if(sprawdzanie(urzytkownik, losowe)==0 or sprawdzanie(urzytkownik, losowe)==5 or sprawdzanie(urzytkownik, losowe)==6)
+                    cout <<"Trafiles "<< sprawdzanie(uzytkownik, losowe);
+                    if(sprawdzanie(uzytkownik, losowe)==0 or sprawdzanie(uzytkownik, losowe)==5 or sprawdzanie(uzytkownik, losowe)==6)
                         cout <<" liczb!";
-                    else if(sprawdzanie(urzytkownik, losowe)==1)
+                    else if(sprawdzanie(uzytkownik, losowe)==1)
                         cout<<" liczbe!";
                     else
                         cout<<" liczby!";
